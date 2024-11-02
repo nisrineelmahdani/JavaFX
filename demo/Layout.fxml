@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.layoutController"> // controller ajouté pour les evenements
+
+      <top>
+        <HBox>
+        <padding>
+        <Insets left="10" top="10", right="10" , bottom="10"> </Insets>
+         <children>
+           <Label text ="fruit:"> </Label>
+           <TextField fx:id="TextFieldForm"> </TextField>
+           <Button text ="Ajouter" onAction="#addFruit"> <Button> // tu fais l'appel a la méthode addfruit qui est dans le controlleur pour mettre un événement au button
+         <children>
+        </HBox>        
+      </top>
+      <center>
+       <VBox spacing="10"> 
+         // vous pouvez mettre le padding / insets 
+         <ListView fx:id="listview1"> 
+         <items>
+            <FXCollections  fx: factory="observableArrayList">
+                 <String fx: value="A">
+                 <String fx: value="B">
+            </FXCollections>
+          </items>
+         </ListView>
+</BorderPane>
+ // si la balsie commence par majiscule => creer un objet 
+  // si la balsie commence par miniscule => get / set
